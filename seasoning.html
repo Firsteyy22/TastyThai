@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasoning</title>
+    <link rel="icon" href="images/tastythaiLOGO.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+                :root {
+  --headerOpacity: 1;
+  --headerScale: 1;
+}
+
+/* Mixin */
+.coverer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* .video-header */
+.video-header {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-header, .video-header video, .video-header .viewport-header {
+  /* Include the .coverer mixin */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-header video {
+  background: #1f2029;
+  object-fit: cover;
+}
+
+.video-header .viewport-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  /* Use variable for opacity */
+  opacity: var(--headerOpacity);
+  /* Use variable for scale */
+  transform: scale(var(--headerScale));
+}
+
+/* html and body styles */
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 150%;
+  line-height: 1.4;
+}
+
+/* h1 styles */
+h1 span {
+  display: block;
+  font-size: 10vw;
+  letter-spacing: 0.5vw;
+}
+
+/* main styles */
+main {
+  background: rgb(246, 148, 44);
+  color: black;
+  font-size: 22px;
+  position: relative;
+  border-radius: 9px;
+  padding: 1rem;
+  margin-top: 100vh;
+}
+
+main::before {
+  content: "";
+  /* Include the .coverer mixin */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -100vh;
+}
+
+p {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+    </style>
+    
+</head>
+<body>
+  <header>
+    <!-- LOGO -->	
+    <a href="home.html" class="logo" >
+        <img src="images/tastythaiLOGO.png">
+    </a>      
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+      <label for="menu-icon"></label>
+      <nav class="nav"> 		
+          <ul class="pt-5">
+            <li><a href="home.html">Home</a></li>
+              <li><a href="localfood.html">local food</a></li>
+            <li><a href="dessert.html">Dessert</a></li>
+              <li><a href="royalthfood.html">Royal Thai food</a></li>
+            <li><a href="seasoning.html">Seasoning</a></li>
+            <li><a href="login.html">Log in</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <header class="video-header">
+      <video src="video/seasoning.mp4" autoplay loop playsinline muted></video>
+      <div class="viewport-header">
+        <h1>
+          <span>Seasoning</span>
+        </h1>
+      </div>
+    </header>
+    
+    <main>
+      <h1 style="color: #1f2029;">TOP PICK</h1>
+
+      <div class="container"> 
+          <div class="deck">
+            <div class="card hovercard">
+              <div class="front face">
+                <h2>Curry paste</h2>
+                <img src="images/chili-curry-spices-thai-food-removebg-preview.png" alt="food 1">
+                <div class="bottext">
+                  <h3>พริกแกง</h3>
+                </div>
+              </div>
+              <div class="back face">
+                <ul>
+                  <p style="font-size: 16px;">A flavorful and aromatic ingredient that serves as the foundation for various Thai dishes. Its versatility and ability to impart complex flavors make it an essential element in Thai cooking.</p>
+                </ul>
+                <div class="botprice">
+                  <h2><a href="https://youtu.be/N80mrcBC0DU?si=daV1K-q8o_AHOxDK">watch vdo</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Sri Racha</h2>
+                  <img src="images/sriracha.png" alt="food 2">
+                  <div class="bottext">
+                    <h3>ซอสพริกศรีราชา</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 18px;">It was created by a Thai immigrant named David Tran in the early 1980s when he founded Huy Fong Foods, the company that produces one of the most famous brands of Sriracha.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="#">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Tamarind paste</h2>
+                  <img src="images/tamarind-removebg-preview.png" alt="food 3">
+                  <div class="bottext">
+                    <h3>น้ำมะขามเปียก</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 18px;">A tangy and versatile ingredient that enhances the flavor of a wide range of dishes. Its sweet and sour taste makes it a popular choice in various cuisines around the world.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/4a0YVco24Yw?si=4JErcdCVIUzYrCUp">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2 style="font-size: 22px;">Seasoned fermented fish sauce</h2>
+                  <img src="images/prara-removebg-preview.png" alt="food 4">
+                  <div class="bottext">
+                    <h3>น้ำปลาร้า</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 18px;">A pungent and savory condiment made from fermented fish and salt. It plays a crucial role in the culinary traditions of Southeast Asia, adding depth of flavor to a wide range of dishes.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/upYJCvVQNhc?si=Azpo2ILBk-qt1mgi">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Fish sauce</h2>
+                  <img src="images/tiparos_seasoning-removebg-preview.png" alt="food 5">
+                  <div class="bottext">
+                    <h3>น้ำปลา</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p>Known as "Nam Pla" in Thai, is a fundamental and widely used condiment in Thai cuisine.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/28fw0eBinNs?si=KyUb12imfQXU-71J">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2 style="font-size: 26px;">Salted Shrimp paste</h2>
+                  <img src="images/kapi-removebg-preview.png" alt="food 6">
+                  <div class="bottext">
+                    <h3>กะปิ</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 20px;">Referred to as "Kapi" in Southeast Asian cuisine, is a condiment with a unique flavor profile and a key ingredient in many dishes.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/PhfP63Vn_rI?si=O5fYjTpa2FVRVXJB">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div id="circle"></div>
+      </div>
+    </main>
+
+
+
+<script src="style.js"></script>
+<footer>
+<p>&copy; 2023 Tasty Thai</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert</title>
+    <link rel="icon" href="images/tastythaiLOGO.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+                :root {
+  --headerOpacity: 1;
+  --headerScale: 1;
+}
+
+/* Mixin */
+.coverer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* .video-header */
+.video-header {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-header, .video-header video, .video-header .viewport-header {
+  /* Include the .coverer mixin */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-header video {
+  background: #1f2029;
+  object-fit: cover;
+}
+
+.video-header .viewport-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  /* Use variable for opacity */
+  opacity: var(--headerOpacity);
+  /* Use variable for scale */
+  transform: scale(var(--headerScale));
+}
+
+/* html and body styles */
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 150%;
+  line-height: 1.4;
+}
+
+/* h1 styles */
+h1 span {
+  display: block;
+  font-size: 10vw;
+  letter-spacing: 0.5vw;
+}
+
+/* main styles */
+main {
+  background: rgb(246, 148, 44);
+  color: black;
+  font-size: 22px;
+  position: relative;
+  border-radius: 9px;
+  padding: 1rem;
+  margin-top: 100vh;
+}
+
+main::before {
+  content: "";
+  /* Include the .coverer mixin */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -100vh;
+}
+
+p {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <!-- LOGO -->	
+    <a href="home.html" class="logo" >
+        <img src="images/tastythaiLOGO.png">
+    </a>      
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+      <label for="menu-icon"></label>
+      <nav class="nav"> 		
+          <ul class="pt-5">
+            <li><a href="home.html">Home</a></li>
+              <li><a href="localfood.html">local food</a></li>
+            <li><a href="dessert.html">Dessert</a></li>
+              <li><a href="royalthfood.html">Royal Thai food</a></li>
+            <li><a href="seasoning.html">Seasoning</a></li>
+            <li><a href="login.html">Log in</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <header class="video-header">
+      <video src="video/thaidessert01.mp4" autoplay loop playsinline muted></video>
+      <div class="viewport-header">
+        <h1>
+          <span>Dessert</span>
+        </h1>
+      </div>
+    </header>
+    
+    <main>
+      <h1 style="color: #1f2029;">TOP PICK MENU</h1>
+
+      <div class="container"> 
+          <div class="deck">
+            <div class="card hovercard">
+              <div class="front face">
+                <h2 style="font-size: 26px;">Mango sticky rice</h2>
+                <img src="images/Mangostickyrice-removebg-preview.png" alt="dessert 1">
+                <div class="bottext">
+                  <h3>ข้าวเหนียวมะม่วง</h3>
+                </div>
+              </div>
+              <div class="back face">
+                <ul>
+                  <p style="font-size: 18px;">Especially popular during the mango season in Thailand, which typically occurs from April to June when mangoes are at their ripest and most flavorful.</p>
+                </ul>
+                <div class="botprice">
+                  <h2><a href="https://youtu.be/H_R108b6ZQg?si=GzYVPH3ILlohOFhv">watch vdo</a></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Khao Tom Mud</h2>
+                  <img src="images/khaotommud-removebg-preview.png" alt="dessert 2">
+                  <div class="bottext">
+                    <h3>ข้าวต้มมัด</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p>Traditional Thai dessert made from sticky rice, coconut milk, and a filling, often banana or other ingredients.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/b8tGqC2thYM?si=lHx1LOjcCcc07yjr">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Mor Kaeng</h2>
+                  <img src="images/Khanom Mor Kaeng.png" alt="dessert 3">
+                  <div class="bottext">
+                    <h3>ขนมหม้อแกง</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 20px;">This dessert is popular in Thai cuisine and is often enjoyed during special occasions, family gatherings, and as a sweet treat.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/-_6kW6JIeBM?si=KeGQilHGCLYjqIgb">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Kanom Krok</h2>
+                  <img src="images/kanomkrok-removebg-preview.png" alt="dessert 4">
+                  <div class="bottext">
+                    <h3>ขนมครก</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 18px;">Made from a simple batter of rice flour and coconut milk, cooked into small, crispy, and creamy pancakes. Its sweet and coconutty flavor makes it a favorite treat in Thailand.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/tqC6C2_lTr4?si=NpCCa2saotyy39hq">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2 style="font-size: 28px;">Coconut Icecream</h2>
+                  <img src="images/coconut-ice-cream-bun-removebg-preview.png" alt="dessert 5">
+                  <div class="bottext">
+                    <h3>ไอศครีมกะทิ</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 20px;">Known as "I-Tim Kati" in Thai, is a delightful frozen dessert that's popular in Thailand and other Southeast Asian countries.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/UMZhqTtD4t0?si=YDRt7IldQsH506pz">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="deck">
+              <div class="card hovercard">
+                <div class="front face">
+                  <h2>Thai tea</h2>
+                  <img src="images/thaitea-removebg-preview.png" alt="dessert 6">
+                  <div class="bottext">
+                    <h3>ชาไทย</h3>
+                  </div>
+                </div>
+                <div class="back face">
+                  <ul>
+                    <p style="font-size: 18px;">Sweet and creamy iced tea beverage made from Ceylon black tea, milk, and sugar, known for its unique flavor, vibrant orange color, and cultural significance in Thailand.</p>
+                  </ul>
+                  <div class="botprice">
+                      <h2><a href="https://youtu.be/BrCjElF5tYI?si=uBwPMj-ZPZaSqo1D">watch vdo</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div id="circle"></div>
+      </div>
+    </main>
+
+    
+    
+
+
+
+
+
+
+
+<script src="style.js"></script>
+<footer>
+<p>&copy; 2023 Tasty Thai</p>
+</footer>
+</body>
+</html>
